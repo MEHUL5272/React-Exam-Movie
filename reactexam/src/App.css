@@ -1,0 +1,427 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  min-height: 70px;
+  background-color: #1c1c1c;
+  border-bottom: 1px solid #444;
+}
+
+.logo {
+  margin-right: 50px;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.logout-btn {
+  background: transparent;
+  border: 1px solid #555;
+  color: #ccc;
+  padding: 7px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  color: white;
+  border-color: white;
+}
+
+
+/* =========================
+   HOME PAGE
+========================= */
+
+.home {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.home h1 {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.home p {
+  color: #bbb;
+  font-size: 18px;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.search-box {
+  width: 400px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-box:focus {
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.3);
+}
+
+
+/* =========================
+   MOVIE CONTAINER
+========================= */
+
+.movie-container {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding-bottom: 50px;
+}
+
+
+/* =========================
+   MOVIE CARD
+========================= */
+
+.movie-card {
+  background-color: #1d1d1d;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.movie-poster {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-card h3 {
+  font-size: 17px;
+  padding: 12px 12px 5px;
+}
+
+.movie-card p {
+  color: #aaa;
+  padding: 0 12px 10px;
+  margin-bottom: 0;
+}
+
+
+/* =========================
+   BOOTSTRAP MOVIE CARD
+========================= */
+
+.movie-bootstrap-card {
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.movie-bootstrap-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+.movie-bootstrap-card img {
+  height: 350px;
+  object-fit: cover;
+}
+
+
+/* =========================
+   MOVIE DETAILS
+========================= */
+
+.movie-details {
+  width: 85%;
+  margin: 50px auto;
+  display: flex;
+  gap: 40px;
+  background-color: #1d1d1d;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.movie-details-poster {
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.movie-details-info {
+  flex: 1;
+}
+
+.movie-details-info h1 {
+  font-size: 38px;
+  margin-bottom: 25px;
+}
+
+.movie-details-info p {
+  color: #ccc;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.movie-details-info strong {
+  color: white;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+
+/* =========================
+   LOGIN
+========================= */
+
+.login-container {
+  width: 400px;
+  margin: 80px auto;
+  background-color: #1d1d1d;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.login-container input:focus {
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.3);
+}
+
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #0056b3;
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.loading-container {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-container h2 {
+  margin-top: 20px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #444;
+  border-top: 5px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.error-container {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.error-container h2 {
+  color: #ff4d4d;
+}
+
+.error-container p {
+  color: #ccc;
+  margin-top: 10px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .movie-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 15px;
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .movie-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .movie-details {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-details-info {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 576px) {
+
+  .movie-container {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+
+  .movie-poster {
+    height: 400px;
+  }
+
+  .movie-bootstrap-card img {
+    height: 320px;
+  }
+
+  .search-box {
+    width: 90%;
+  }
+
+  .login-container {
+    width: 90%;
+    margin: 50px auto;
+  }
+
+  .movie-details {
+    padding: 20px;
+  }
+
+  .movie-details-poster {
+    width: 250px;
+    height: 375px;
+  }
+
+  .movie-details-info h1 {
+    font-size: 28px;
+  }
+}
